@@ -48,6 +48,6 @@ Then select and open ```Lab03SystemIO.sln```
 ---
 
 ### Change Log
-1.0: LAB 03: Systems I.O complete 10/20/19
+1.0: Lab 04: Classes & Objects (tic-tac-toe) 10/20/19
 
 ------------------------------
