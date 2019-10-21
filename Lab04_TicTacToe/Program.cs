@@ -4,10 +4,12 @@ using Lab04_TicTacToe.Classes;
 
 namespace Lab04_TicTacToe
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Press 'ENTER' to play");
+            Console.ReadLine();
             PlayGame();
         }
 
