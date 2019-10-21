@@ -39,15 +39,12 @@ Then select and open ```Lab03SystemIO.sln```
 ### Visuals
 
 #### Application Start
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/mainMenu.png)
-#### Game in Action
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/playing%20game.png)
+![Image 1](https://github.com/biniamsea2/LAB-04-TicTacToe-/blob/master/Screenshots/Screenshot%20(35).png)
+#### Tie game
+![Image 1](https://github.com/biniamsea2/LAB-04-TicTacToe-/blob/master/Screenshots/Screenshot%20(36).png)
 #### Won Game
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/game%20won.png)
-#### View Names in the List
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/view%20list%20of%20names.png)
-#### Add Name to the List
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/add%20to%20list.png)
+![Image 1](https://github.com/biniamsea2/LAB-04-TicTacToe-/blob/master/Screenshots/Screenshot%20(37).png)
+
 ---
 
 ### Change Log
