@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+	public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
 		public Board Board { get; set; }
-
+        public object GameBoard { get; set; }
 
 		/// <summary>
 		/// Require 2 players and a board to start a game. 
@@ -24,11 +24,33 @@ namespace Lab04_TicTacToe.Classes
 			Board = new Board();
 		}
 
-		/// <summary>
-		/// Activate the Play of the game
-		/// </summary>
-		/// <returns>Winner</returns>
-		public Player Play()
+
+        /// <summary>
+        /// added this method to include it in the tie game scenario
+        /// </summary>
+        static void PlayGame()
+        {
+            Player Biniam = new Player();
+            Biniam.Name = "Biniam";
+            Biniam.Marker = "O";
+            Biniam.IsTurn = true;
+
+            Player Obama = new Player();
+            Obama.Name = "Obama";
+            Obama.Marker = "X";
+            Obama.IsTurn = false;
+
+
+            Game game = new Game(Biniam, Obama);
+            game.Play();
+
+        }
+
+        /// <summary>
+        /// Activate the Play of the game
+        /// </summary>
+        /// <returns>Winner</returns>
+        public Player Play()
 		{
 
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
@@ -47,6 +69,40 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
+             
+
+            int counter = 0;
+            while (CheckForWinner(Board) == false)
+            {
+                if (counter < 9)
+	            {
+                    Board.DisplayBoard();
+                    SwitchPlayer();
+                    NextPlayer().TakeTurn(Board);
+                    counter ++;
+
+	            }
+                else
+	            {
+                    Console.WriteLine("\n It's a Tie Game");
+                    Console.WriteLine("Press 1 to play another game, otherwise press any key to exit.");
+                    string userinput = Console.ReadLine();
+                        if (userinput == "1")
+                    {
+                        PlayGame();
+                    }
+                    return Winner;
+
+
+                }
+
+            }
+                Board.DisplayBoard();
+                Console.WriteLine($"Congrats you won");
+                return Winner;
+	
+
+
 		}
 
 
@@ -82,8 +138,13 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
+                // TODO:  Determine a winner has been reached. 
+                // return true if a winner has been reached. 
+
+                if (a == b && b==c)
+                {
+                    return true;
+                }
 			
 			}
 
