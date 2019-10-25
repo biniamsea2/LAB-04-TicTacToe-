@@ -48,8 +48,33 @@ namespace XUnitTestProject1
 
             Assert.False(testGame.CheckForWinner(testGame.Board));
 
+        }
+
+        [Fact]
+        public void SwitchPlayertest()
+        {
+            Player Biniam = new Player();
+            Biniam.Marker = "X";
+            Player Obama = new Player();
+            Obama.Marker = "O";
+
+            Game testGame = new Game(Biniam, Obama);
+
+            testGame.PlayerOne.IsTurn = true;
+            testGame.SwitchPlayer();
+
+            Assert.Equal(testGame.PlayerTwo, testGame.NextPlayer());
 
         }
+         
+        [Fact]
+        public void TestIndex()
+        {
+            Position testing = Player.PositionForNumber(1);
+            Assert.Equal(new int[] { 0, 0 }, new int[] { testing.Row, testing.Column });
+
+        }
+
 
 
     }
